@@ -1,0 +1,199 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$dark-gray: #3E3A43;
+$gold: #D3AF37;
+$ink: #1B1B24;
+$light-gold: #F4F2B7;
+
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  background-color: $ink;
+  color: $gold;
+
+  a {
+    text-decoration: none;
+    color: $dark-gray;
+
+    &:hover, &:focus {
+      color: #000000;
+      text-decoration: none;
+    }
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .button {
+    background-color: $gold;
+    border: none;
+    color: #ffffff;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #E9DC8D;
+      text-decoration: none;
+    }
+
+    &:active {
+      transform: translateY(4px);
+    }
+  }
+
+  .home-wrapper {
+    margin-top: 10%;
+  }
+
+  .header-wrapper {
+    border-bottom: 1px lightgray solid;
+    padding: 50px 0;
+
+    h1 {
+      letter-spacing: 0.25em;
+      font-family: serif;
+      background: -webkit-linear-gradient($light-gold, $gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 48px;
+    }
+
+    .page-header {
+      min-height: 350px;
+      background-image: url('../images/atx_fabrications_logo.png');
+      background-repeat: no-repeat;
+      background-size: 700px 350px;
+      background-position: center top;
+      margin: 0;
+      border-bottom: none;
+    }
+  }
+
+  .skills {
+    padding: 50px 0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .col-xs-1 {
+      width: 12%;
+      color: $light-gold;
+    }
+
+    .col-xs-3 {
+      font-family: cursive;
+    }
+  }
+
+  .contact {
+    margin-top: 10%;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
+
+// mobile
+@media only screen and (max-width: 500px) {
+  .container {
+    .home-wrapper {
+      margin-top: 20%;
+
+      .header-wrapper {
+        h1 {
+          font-size: 36px;
+        }
+        .page-header {
+          min-height: 200px;
+          background-size: 300px 200px;
+        }
+      }
+    }
+  }
+}
