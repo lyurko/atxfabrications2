@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name atxfabricationsAppApp.controller:MainCtrl
+ * @name atxfabricationsApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the atxfabricationsAppApp
+ * Controller of the atxfabricationsApp
  */
-angular.module('atxfabricationsAppApp')
+angular.module('atxfabricationsApp')
   .controller('MainCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

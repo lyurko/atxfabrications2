@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name atxfabricationsAppApp.controller:AboutCtrl
+ * @name atxfabricationsApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the atxfabricationsAppApp
+ * Controller of the atxfabricationsApp
  */
-angular.module('atxfabricationsAppApp')
+angular.module('atxfabricationsApp')
   .controller('AboutCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

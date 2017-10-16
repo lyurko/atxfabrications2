@@ -3,6 +3,7 @@ $dark-gray: #3E3A43;
 $gold: #D3AF37;
 $ink: #1B1B24;
 $light-gold: #F4F2B7;
+$blueprint: #0A2D5C;
 
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
@@ -17,8 +18,12 @@ $light-gold: #F4F2B7;
 
 body {
   padding: 0;
-  background-color: $ink;
-  color: $gold;
+  color: #000;
+  background: url('/images/blueprint.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
   a {
     text-decoration: none;
@@ -47,6 +52,8 @@ body {
     &:hover {
       background-color: #E9DC8D;
       text-decoration: none;
+      transition-delay: 0.2s;
+      -webkit-transition-delay: 0.2s;
     }
 
     &:active {
@@ -55,30 +62,15 @@ body {
   }
 
   .home-wrapper {
-    margin-top: 10%;
+    margin-top: 15%;
+    background-color: #ffffff;
+    border: #000000 5px solid;
   }
 
   .header-wrapper {
-    border-bottom: 1px lightgray solid;
     padding: 50px 0;
-
-    h1 {
-      letter-spacing: 0.25em;
-      font-family: serif;
-      background: -webkit-linear-gradient($light-gold, $gold);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: 48px;
-    }
-
-    .page-header {
-      min-height: 350px;
-      background-image: url('../images/atx_fabrications_logo.png');
-      background-repeat: no-repeat;
-      background-size: 700px 350px;
-      background-position: center top;
-      margin: 0;
-      border-bottom: none;
+    .expand {
+      width: 15em;
     }
   }
 
@@ -87,19 +79,48 @@ body {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    font-family: 'Abel', sans-serif;
+
+    h4 {
+      letter-spacing: 0.1em;
+    }
 
     .col-xs-1 {
       width: 12%;
-      color: $light-gold;
-    }
+      color: $dark-gray;
 
-    .col-xs-3 {
-      font-family: cursive;
+      h4 {
+        font-size: 18px;
+        font-weight: bold;
+      }
     }
   }
 
   .contact {
-    margin-top: 10%;
+    margin: 5% 0;
+    .icon {
+      margin: 0 2%;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      color: #ffffff;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      border-radius: 50%;
+      background-color: #000;
+
+      &:hover, &:active {
+          -webkit-transform: scale(1.1) rotate(360deg);
+          -moz-transform: scale(1.1) rotate(360deg);
+          -ms-transform: scale(1.1) rotate(360deg);
+          -o-transform: scale(1.1) rotate(360deg);
+          transform: scale(1.1) rotate(360deg);
+      }
+    }
   }
 
   .footer {
@@ -185,15 +206,16 @@ body {
     .home-wrapper {
       margin-top: 20%;
 
-      .header-wrapper {
-        h1 {
-          font-size: 36px;
-        }
-        .page-header {
-          min-height: 200px;
-          background-size: 300px 200px;
-        }
+      .page-header {
+        min-height: 200px;
+        background-size: 300px 200px;
+      }
+      .icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
       }
     }
   }
 }
+

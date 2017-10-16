@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name atxfabricationsAppApp
+ * @name atxfabricationsApp
  * @description
- * # atxfabricationsAppApp
+ * # atxfabricationsApp
  *
  * Main module of the application.
  */
 angular
-  .module('atxfabricationsAppApp', [
+  .module('atxfabricationsApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
