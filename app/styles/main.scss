@@ -20,7 +20,6 @@ body {
   padding: 0;
   color: #000;
   font-family: 'Abel', sans-serif;
-  //background: url('/images/blueprint.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -63,7 +62,6 @@ body {
   }
 
   .home-wrapper {
-    margin-top: 10%;
     background-color: #ffffff;
     // border: #000000 5px solid;
 
@@ -138,8 +136,14 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+  .navbar.navbar-default {
+    background-color: #ffffff;
+    border: none;
+  }
+  img.logo-image {
+    height: 5em;
+    padding: 1em 0;
+  }
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -153,8 +157,6 @@ body {
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -181,6 +183,46 @@ body {
   }
 }
 
+// slider
+@import url(https://fonts.googleapis.com/css?family=Istok+Web);
+@keyframes slidy {
+  0% { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
+}
+* {
+  box-sizing: border-box;
+}
+body, figure {
+  margin: 0;
+  font-family: Istok Web, sans-serif;
+  font-weight: 100;
+}
+div#captioned-gallery {
+  width: 100%; overflow: hidden;
+}
+figure.slider {
+  position: relative; width: 500%;
+  font-size: 0; animation: 30s slidy infinite;
+}
+figure.slider figure {
+  width: 20%; height: auto;
+  display: inline-block;  position: inherit;
+}
+figure.slider img { width: 100%; height: auto; }
+figure.slider figure figcaption {
+  position: absolute; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  color: #fff; width: 100%;
+  font-size: 2rem; padding: .6rem;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -203,7 +245,7 @@ body {
 // mobile
 @media only screen and (max-width: 500px) {
   .container {
-    .home-wrapper {
+    &.home-wrapper {
       margin-top: 30%;
 
       .header-wrapper img{
