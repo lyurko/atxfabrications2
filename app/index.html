@@ -23,48 +23,31 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header" style="display: none;">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <md-button class="md-icon-button logo" aria-label="ATX Fabrications">
+    <div class="container header">
+      <md-fab-toolbar md-open="true" flex>
+        <md-toolbar>
+          <md-fab-actions>
+            <md-button class="md-icon-button logo" aria-label="ATX Fabrications" href="">
               <img class="logo-image" src="/images/atx_fabrications.png" />
             </md-button>
-            <!--
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            -->
-          </div>
-
-          <!--
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
-          -->
-        </div>
-      </div>
+          </md-fab-actions>
+        </md-toolbar>
+       </md-fab-toolbar>
     </div>
 
     <div>
-      <div ng-view=""></div>
+      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+      <div class="elfsight-app-c853e34f-e16e-4816-ba45-21bc19e74cca"></div>
+      <div class="container" ng-view="">
+      </div>
     </div>
 
-    <div class="footer">
+    <div class="container footer">
       <div class="container">
       </div>
     </div>
 
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <!-- Google Analytics -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
